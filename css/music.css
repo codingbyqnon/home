@@ -1,0 +1,94 @@
+.music {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  background-color: #c1121f;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  border: 4px solid #c1121f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(164, 109, 109, 0.22) 0px 15px 12px;
+  cursor: pointer;
+  z-index: 100000;
+}
+
+.bi-play-fill::before {
+  color: #c1121f;
+  margin-left: 0 !important;
+}
+
+.bi-pause-fill::before {
+  color: #c1121f;
+}
+
+.bi::before,
+[class*=" bi-"]::before,
+[class^="bi-"]::before {
+  vertical-align: -0.175em;
+  margin-left: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  .music {
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+  }
+}
+
+.musicFirstPanel {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #c1121f;
+  top: 0;
+  z-index: 9999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.musicFirstPanel-logo {
+  width: 600px;
+  margin: auto;
+  display: block;
+}
+
+/* White circular button with play symbol */
+.enter-music-button {
+  background-color: white;
+  color: #c1121f;
+  border: 4px solid #c1121f;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* Hover effect: invert colors */
+.enter-music-button:hover {
+  background-color: #c1121f;
+  color: white;
+  border: 4px solid white;
+  transform: scale(1.05);
+}
+
+/* Icon inherits color from button */
+.enter-music-button .bi::before {
+  color: inherit;
+  font-size: inherit;
+}
